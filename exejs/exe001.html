@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paises de origem</title>
+    <style>
+        body {
+            background: #999;
+            color: #fff;
+            
+        }
+
+        input {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        div#res {
+            margin-left: 20px;
+            font-size: 20px;
+            color: rgb(241, 13, 13);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="tps" id="tps" />
+        <input type="button" onmouseenter="passar()" onmouseout="passou()" value="verificar" onclick="verif()"
+            id="aa" />
+
+        <div id="res">verificando o país...</div>
+    </div>
+    <script>
+        var a = document.getElementById('aa')
+        a.addEventListener("mouseenter")
+        a.addEventListener("mouseout")
+
+        function passar() {
+
+            a.style.background = "#999"
+        }
+
+        function passou() {
+
+            a.style.background = "#fff"
+        }
+        function verif() {
+            var p = document.getElementById("tps")
+            var res = document.getElementById("res")
+            var psp = String(p.value);
+            res.innerHTML = `seu pais de origem é ${psp}`
+
+            if (psp != "brasil") {
+                res.innerHTML = `estrangeiro`
+            } else {
+                res.innerHTML = `brasileiro`
+            }
+        }
+    </script>
+</body>
+
+</html>
