@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de votos</title>
+    <style>
+      body {
+        font: normal 20pt Arial;
+        background: #999;
+        margin-left: 20px;
+      }
+      input {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border-radius: 10px;
+      }
+      div#rs {
+        margin-left: 20px;
+        font-size: 20px;
+        color: rgb(190, 204, 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>Sistemas de votação</p>
+      <input type="number" name="vt" id="vt" />
+      <input type="button" value="pesquisar" id="pesquisar" onmouseenter="me()" onmouseout="foi()" onclick="votar()" />
+
+      <div id="rs">Verificando o sistema de votos</div>
+    </div>
+    <script>
+        var a = document.getElementById('pesquisar')
+        
+        a.addEventListener("mouseenter")
+        a.addEventListener("mouseout")
+        function me() {
+            a.style.background = "#999"
+
+        }
+        function foi() {
+
+            a.style.background = "#fff"
+        }
+      function votar() {
+        var v = document.getElementById("vt");
+        var res = document.getElementById("rs");
+        var idp = Number(v.value);
+
+        if (idp < 16) {
+          res.innerHTML = `nao pode votar com ${idp} anos de idade`;
+        } else if (idp < 18 || idp > 65) {
+          res.innerHTML = ` voto opcional sua idade ${idp}`;
+        } else {
+          res.innerHTML = `Você ${idp} seu Voto é Obrigatorio`;
+        }
+      }
+    </script>
+  </body>
+</html>
