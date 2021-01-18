@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas de Horas</title>
+    <style>
+        body {
+             background: #eee;
+             font-size: 20px;
+             color: rgb(211, 171, 171);
+        }
+        input {
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        div#rs{
+            margin-left: 20px;
+        font-size: 20px;
+        color: rgb(190, 204, 0);
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="number" name="inputHoras" id="inputHoras" />
+      <input
+        type="button"
+        value="pesquisar"
+        onmouseenter="on()"
+        onmouseout="off()"
+        onclick="horas()"
+        id="bt"
+      />
+
+      <div id="rs">horarios</div>
+    </div>
+    <script>
+      var a = document.getElementById("bt");
+      a.addEventListener("mouseenter", "mouseout");
+
+      function on() {
+        a.style.background = "#999";
+      }
+
+      function off() {
+        a.style.background = "#fff";
+      }
+      function horas() {
+        var h = document.getElementById("inputHoras");
+        var res = document.getElementById("rs");
+        var horas = Number(h.value);
+
+        if (horas < 12) {
+          res.innerHTML = `bom dia`;
+        } else if (horas < 18) {
+          res.innerHTML = `boa tarde`;
+        } else {
+          res.innerHTML = `boa noite`;
+        }
+      }
+    </script>
+  </body>
+</html>
