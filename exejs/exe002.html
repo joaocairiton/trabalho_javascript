@@ -28,23 +28,28 @@
     <div>
       <p>Sistemas de votação</p>
       <input type="number" name="vt" id="vt" />
-      <input type="button" value="pesquisar" id="pesquisar" onmouseenter="me()" onmouseout="foi()" onclick="votar()" />
+      <input
+        type="button"
+        value="pesquisar"
+        id="pesquisar"
+        onmouseenter="me()"
+        onmouseout="foi()"
+        onclick="votar()"
+      />
 
       <div id="rs">Verificando o sistema de votos</div>
     </div>
     <script>
-        var a = document.getElementById('pesquisar')
-        
-        a.addEventListener("mouseenter")
-        a.addEventListener("mouseout")
-        function me() {
-            a.style.background = "#999"
+      var a = document.getElementById("pesquisar");
 
-        }
-        function foi() {
-
-            a.style.background = "#fff"
-        }
+      a.addEventListener("mouseenter");
+      a.addEventListener("mouseout");
+      function me() {
+        a.style.background = "#999";
+      }
+      function foi() {
+        a.style.background = "#fff";
+      }
       function votar() {
         var v = document.getElementById("vt");
         var res = document.getElementById("rs");
