@@ -1,0 +1,28 @@
+body{
+    background: #999;
+    font: normal 20pt Arial;
+
+}
+header{
+color: rgb(228, 63, 12);
+text-align: center;
+
+}
+section{
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px black;
+
+}
+footer{
+    color: rgb(228, 63, 12);
+    text-align: center;
+    font-style: italic;
+
+}
+input{
+    border-radius: 5px;
+}

@@ -9,7 +9,7 @@ function buscar() {
     window.alert("ERRO: falta dados a ser digitados")
     
   } else {
-    res.innerHTML = "Contando:  <br>"
+    res.innerHTML = "Contando: <br>"
     let i = Number(ini.value)
     let f = Number(fn.value)
     let p = Number(ps.value)
