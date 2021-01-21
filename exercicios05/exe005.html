@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valores</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Analisar numeros</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Numero de 0 a 100:
+                <input type="number" name="numero" id="txtn" />
+                <input type="button" value="Adicionar" onclick="add()" min="0" max="100" />
+                <br><select name="numeros" id="selnum" size="10"></select>
+            </p>
+        </div>
+        <div>
+            <option>numeros adicionados</option>
+           
+            
+        </div>
+        <div>
+            <input type="button" value="Finalizar" onclick="finalizar()"  />
+        </div>
+        <div id="res">
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy; joaoCairiton</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
