@@ -1,9 +1,21 @@
-var obj = {
-    sleep: function() {
-      setTimeout(() => {
-        console.log(this);
-      }, 1000);
+//EventEmitter
+/*const EventEmitter = require('events');
+
+class Users extends EventEmitter {
+    userLogged(data) {
+setTimeout(() =>{
+    this.emit('User logged', data);
+
+},3000);
+
+        
     }
-  }
-  
-  obj.sleep();
+}
+const users = new Users();
+
+users.on('User logged', data => {
+    console.log(data);
+});
+users.userLogged({ user: 'joao' });
+users.userLogged({ user: 'cairiton' });*/
+/*----------------------------------------*/
